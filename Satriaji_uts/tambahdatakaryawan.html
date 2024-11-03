@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Karyawan</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Sidebar and general styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #0047b3;
+            color: #fff;
+            min-height: 100vh;
+            padding-top: 20px;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .sidebar-header h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .sidebar-header p {
+            font-size: 14px;
+        }
+
+        .sidebar-header span {
+            font-size: 12px;
+            color: #ddd;
+        }
+
+        .menu {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .menu li {
+            padding: 10px 20px;
+        }
+
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 8px 0;
+        }
+
+        .menu li a:hover,
+        .menu li a.active {
+            background-color: #337ab7;
+            border-radius: 5px;
+        }
+
+        .menu-section {
+            font-size: 12px;
+            padding: 10px 20px;
+            color: #ccc;
+        }
+
+        /* Main content styling */
+        .main-content {
+            flex: 1;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        header h1 {
+            color: #0047b3;
+            font-size: 24px;
+        }
+
+        /* Form styling */
+        .form-section {
+            margin-top: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-section h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .btn-save {
+            background-color: #28a745;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-save:hover {
+            background-color: #218838;
+        }
+
+        .btn-cancel {
+            background-color: #dc3545;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-cancel:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>UNIVERSITAS PAMULANG</h2>
+            <p>Welcome, Muhamad satriaji</p>
+            <span>Administrator</span>
+        </div>
+        <ul class="menu">
+            <li><a href="dashboard.html" class="">Dashboard</a></li>
+            <li class="menu-section">MENU KARYAWAN</li>
+            <li><a href="karyawan.html">Karyawan</a></li>
+            <li><a href="jabatan.html">Jabatan</a></li>
+            <li><a href="divisi.html">Divisi</a></li>
+            <li class="menu-section">MENU ABSENSI</li>
+            <li><a href="absensi.html">Absensi</a></li>
+            <li><a href="izin.html">Izin</a></li>
+            <li><a href="lembur.html">Lembur</a></li>
+            <li class="menu-section">MENU PENGGAJIAN</li>
+            <li><a href="#">Slip Gaji</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Data Karyawan</h1>
+        </header>
+
+        <div class="form-section">
+            <h2>Form Tambah Data Karyawan</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="name" placeholder="Masukkan Nama Lengkap">
+                </div>
+                <div class="form-group">
+                    <label for="gender">Jenis Kelamin</label>
+                    <select class="form-control" id="gender">
+                        <option>Laki-laki</option>
+                        <option>Perempuan</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Masukkan Email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">No HP</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Masukkan No HP">
+                </div>
+                <div class="form-group">
+                    <label for="address">Alamat</label>
+                    <textarea class="form-control" id="address" rows="3" placeholder="Masukkan Alamat"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Masukkan Password">
+                </div>
+                <div class="form-group">
+                    <label for="position">Jabatan</label>
+                    <input type="text" class="form-control" id="position" placeholder="Masukkan Jabatan">
+                </div>
+                <div class="form-group">
+                    <label for="division">Divisi</label>
+                    <input type="text" class="form-control" id="division" placeholder="Masukkan Divisi">
+                </div>
+                <button type="submit" class="btn-save">Simpan</button>
+                <button type="button" class="btn-cancel">Batal</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

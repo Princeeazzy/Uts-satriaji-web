@@ -1,0 +1,228 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Karyawan</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #0047b3;
+            color: #fff;
+            min-height: 100vh;
+            padding-top: 20px;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .sidebar-header h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .sidebar-header p {
+            font-size: 14px;
+        }
+
+        .sidebar-header span {
+            font-size: 12px;
+            color: #ddd;
+        }
+
+        .menu {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .menu li {
+            padding: 10px 20px;
+        }
+
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 8px 0;
+        }
+
+        .menu li a:hover,
+        .menu li a.active {
+            background-color: #337ab7;
+            border-radius: 5px;
+        }
+
+        .menu-section {
+            font-size: 12px;
+            padding: 10px 20px;
+            color: #ccc;
+        }
+
+        .main-content {
+            flex: 1;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        header h1 {
+            color: #0047b3;
+            font-size: 24px;
+        }
+
+        .data-section {
+            margin-top: 20px;
+        }
+
+        .data-section h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .btn-add {
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            float: right;
+        }
+
+        .btn-add:hover {
+            background-color: #0056b3;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        table td {
+            color: #555;
+        }
+
+        .btn-view, .btn-edit, .btn-delete {
+            text-decoration: none;
+            margin-right: 5px;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        .btn-view {
+            color: #007bff;
+        }
+
+        .btn-edit {
+            color: #28a745;
+        }
+
+        .btn-delete {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>UNIVERSITAS PAMULANG</h2>
+            <p>Welcome, Muhamad satriaji</p>
+            <span>Administrator</span>
+        </div>
+        <ul class="menu">
+            <li><a href="dashboard.html" class="">Dashboard</a></li>
+            <li class="menu-section">MENU KARYAWAN</li>
+            <li><a href="karyawan.html">Karyawan</a></li>
+            <li><a href="jabatan.html">Jabatan</a></li>
+            <li><a href="divisi.html">Divisi</a></li>
+            <li class="menu-section">MENU ABSENSI</li>
+            <li><a href="absensi.html">Absensi</a></li>
+            <li><a href="izin.html">Izin</a></li>
+            <li><a href="lembur.html">Lembur</a></li>
+            <li class="menu-section">MENU PENGGAJIAN</li>
+            <li><a href="#">Slip Gaji</a></li>
+        </ul>
+    </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h2>Daftar Lembur Karyawan</h2>
+                <button class="update-status">Ubah Status</button>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Tanggal</th>
+                            <th>Jam Lembur Mulai | Berakhir</th>
+                            <th>Keperluan Lembur</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Yovan Fiqri</td>
+                            <td>2023-05-10</td>
+                            <td>10:35:00 | 15:35:00</td>
+                            <td>213</td>
+                            <td>Menunggu Konfirmasi</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Yovan Fiqri</td>
+                            <td>2023-05-09</td>
+                            <td>11:05:00 | 04:05:00</td>
+                            <td>g</td>
+                            <td>Disetujui</td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</body>
+</html>
