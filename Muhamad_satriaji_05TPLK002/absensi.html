@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABSENSI</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            width: 250px;
+            background-color: #0047b3;
+            color: #fff;
+            min-height: 100vh;
+            padding-top: 20px;
+            position: fixed;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .sidebar-header h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .sidebar-header p {
+            font-size: 14px;
+        }
+
+        .sidebar-header span {
+            font-size: 12px;
+            color: #ddd;
+        }
+
+        .menu {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .menu li {
+            padding: 10px 20px;
+        }
+
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 8px 0;
+        }
+
+        .menu li a:hover,
+        .menu li a.active {
+            background-color: #337ab7;
+            border-radius: 5px;
+        }
+
+        .menu-section {
+            font-size: 12px;
+            padding: 10px 20px;
+            color: #ccc;
+        }
+
+        /* Main content styling */
+        .main-content {
+            margin-left: 250px; /* To avoid overlap with sidebar */
+            padding: 20px;
+            width: calc(100% - 250px);
+        }
+
+        header h1 {
+            color: #0047b3;
+            font-size: 24px;
+        }
+
+        /* Table container */
+        .table-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        table td {
+            color: #555;
+        }
+
+        .btn-view {
+            color: #007bff;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100px;
+            }
+
+            .main-content {
+                margin-left: 100px;
+                width: calc(100% - 100px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-header">
+                <h2>UNIVERSITAS PAMULANG</h2>
+                <p>Welcome, Muhamad satriaji</p>
+                <span>Administrator</span>
+            </div>
+        </div>
+        <ul class="menu">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li class="menu-section">MENU KARYAWAN</li>
+            <li><a href="karyawan.html">Karyawan</a></li>
+            <li><a href="jabatan.html">Jabatan</a></li>
+            <li><a href="divisi.html">Divisi</a></li>
+            <li class="menu-section">MENU ABSENSI</li>
+            <li><a href="absensi.html">Absensi</a></li>
+            <li><a href="izin.html">Izin</a></li>
+            <li><a href="lembur.html">Lembur</a></li>
+            <li class="menu-section">MENU PENGGAJIAN</li>
+            <li><a href="#">Slip Gaji</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h1>Daftar Hadir Karyawan</h1>
+        </header>
+
+        <!-- Table -->
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nama Karyawan</th>
+                        <th>Tanggal</th>
+                        <th>Lokasi Absen</th>
+                        <th>Jam Masuk</th>
+                        <th>Jam Keluar</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Achmad Febry</td>
+                        <td>2023-05-10</td>
+                        <td>Kampus Kimia</td>
+                        <td>16:21:14</td>
+                        <td>18:09:22</td>
+                        <td><a href="#" class="btn-view">👁️</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Yovan Fiqri</td>
+                        <td>2023-05-10</td>
+                        <td>UNPAM Viktor</td>
+                        <td>10:35:02</td>
+                        <td>10:35:02</td>
+                        <td><a href="#" class="btn-view">👁️</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Yovan Fiqri</td>
+                        <td>2023-05-09</td>
+                        <td>UNPAM Viktor</td>
+                        <td>11:04:40</td>
+                        <td>11:04:40</td>
+                        <td><a href="#" class="btn-view">👁️</a></td>
+                    </tr>
+                    <!-- Additional rows can be added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
